@@ -1,0 +1,36 @@
+---
+title: "Milestone-3"
+author: "Aysha Emmerson"
+date: "04/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, downloading spending and political donations data}
+
+library(tidyverse)
+library(googlesheets4)
+
+#Load desired datasets from OpenSecrets.org google sheets.
+
+nra_spending <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=1782600961")
+
+donations_congress_2018 <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=673121545")
+
+donations_congress_2016 <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=0")
+
+annual_lobbying <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=1514852987")
+
+outside_spending <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=2111600857")
+
+total_outside_spending <- read_sheet("https://docs.google.com/spreadsheets/d/1-7PdCI2NawSgP1QE-cGYVYedetYqepR-4jBweaJyqFo/edit#gid=2111600857")
+
+
+```
+
+
+
+
